@@ -1,0 +1,1 @@
+DELETE P1 FROM PERSON P1, PERSON P2 WHERE P1.Email = P2.Email and P1.Id > P2.id;

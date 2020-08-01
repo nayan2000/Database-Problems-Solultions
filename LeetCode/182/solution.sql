@@ -1,0 +1,1 @@
+Select s1.Email as "Email" from (Select Email, Count(*) as "Count" from Person group by Email) as s1 where s1.Count > 1 ; 
