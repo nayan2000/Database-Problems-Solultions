@@ -1,0 +1,1 @@
+Select Scores.Score as "score", ranks.Rank from (Select s1.Score as "Score", Count(*) as "Rank" from (select distinct Score from Scores) s1, (select distinct Score from Scores) s2 where s1.Score<=s2.Score group by s1.Score) ranks, Scores where Scores.Score = ranks.Score order by Scores.Score desc;
